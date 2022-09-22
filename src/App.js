@@ -55,8 +55,8 @@ And here. | Okay. | I think we get it.
   return (
     <div className="App">
       <div className="editor">
-        <span className="title-editor">Editor</span>
-
+        <span className="editor__title">Editor</span>
+        {/* 4aa3a3 */}
         {value.length ? (
           <textarea
             name="Editor"
@@ -77,10 +77,12 @@ And here. | Okay. | I think we get it.
           />
         )}
       </div>
-      <div className="previewWrap">
-        <span className="title-editor">Preview</span>
+
+      <div className="preview__wrap">
+        <span className="editor__title">Preview</span>
         <div
           id="preview"
+          className="preview"
           dangerouslySetInnerHTML={{ __html: marked(value), breaks: true }}
         ></div>
       </div>
